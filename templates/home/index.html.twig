@@ -1,0 +1,166 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<style>
+    /* .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; } */
+    .container { background: #EEEEEE;}
+    .myNav {background: #303841!important;}
+    .navText {color: #EEEEEE!important;}
+    .carouselImg {height: 100vh!important;}
+    .mainText {color: #FF5722!important; text-align: center;}
+    .brand {color: #FF5722!important;}
+    .heading {color: #FF5722!important; text-align: center;}
+    .scrollText {margin-top: 2rem!important;}
+    .links {color: #EEEEEE!important; text-decoration: none;}
+    .links:hover {color: #FF5722!important; text-decoration: none;}
+    /* #FF5722 */
+    /* #303841 */
+    /* #EEEEEE */
+</style>
+
+{# **************************************************************************************************
+************************************************Navbar********************************************
+************************************************************************************************** #}
+<div class="nav">
+    <nav class="navbar navbar-expand-lg fixed-top myNav">
+        <div class="container-fluid">
+          <a class="navbar-brand brand" href="index.html.twig">Symfony</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active navText" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link navText" href="random.html.twig">Random</a>
+              </li>
+          </div>
+        </div>
+      </nav>
+</div>
+{# **************************************************************************************************
+************************************************Content********************************************
+************************************************************************************************** #}
+<div class="container">
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://cdn.pixabay.com/photo/2014/07/28/20/39/sunset-404072_1280.jpg" 
+            class="d-block w-100 carouselImg" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Symfony Framework</h5>
+              <p>The leading PHP framework to create websites and web applications.</p>
+              <p>Built on top of the Symfony Components.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.pixabay.com/photo/2018/06/16/16/17/road-3478977_1280.jpg" 
+            class="d-block w-100 carouselImg" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Symfony Community</h5>
+              <p>A passionate group of over 600,000 developers from more than 120 countries, 
+                all committed to helping PHP surpass the impossible.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://cdn.pixabay.com/photo/2020/09/01/21/03/sunset-5536777_1280.jpg" 
+            class="d-block w-100 carouselImg" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Symfony Components</h5>
+              <p>A set of decoupled and reusable components on which the best PHP applications are built, 
+                such as Drupal, Prestashop, and Laravel.</p>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+      <h3 class="my-5 heading">Symfony Project stats</h3>
+      <div class="flex">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card text-bg-dark mb-3 h-100">
+                    <div class="card-header mainText"><h5>Symfony Contributors</h5></div>
+                    <div class="card-body">
+                      <p class="card-text">Symfony code has 3,580 contributors.</p>
+                      <p class="card-text">Symfony documentation has 2,920 contributors.</p> 
+                    </div>
+                  </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-dark mb-3 h-100">
+                    <div class="card-header mainText"><h5>Symfony Community</h5></div>
+                    <div class="card-body">
+                      <p class="card-text">Symfony Community is a passionate group of over</p>
+                      <p class="card-text">600,000 developers from more than 120 countries,</p>
+                      <p class="card-text">all committed to helping PHP surpass the impossible.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card text-bg-dark mb-3 h-100">
+                    <div class="card-header mainText"><h5>Symfony Stats</h5></div>
+                    <div class="card-body">
+                      <p class="card-text">231 Symfony Packages</p>
+                      <p class="card-text">22,929,826 Daily Downloads</p>
+                      <p class="card-text">22,929,826 Daily Downloads</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <h3 class="my-5 heading">Why should I use a framework?</h3>
+      <div class="scrollText">
+        <div class="row bg-dark text-white">
+            <div class="col-4 my-5">
+              <div id="simple-list-example" class="d-flex flex-column gap-2 simple-list-example-scrollspy text-center">
+                <a class="p-1 rounded links" href="#simple-list-item-1">Symfony at a Glance</a>
+                <a class="p-1 rounded links" href="#simple-list-item-2">Investing in the task</a>
+                <a class="p-1 rounded links" href="#simple-list-item-3">Upgradability and maintenance</a>
+                <a class="p-1 rounded links" href="#simple-list-item-4">PHP framework</a>
+                <a class="p-1 rounded links" href="#simple-list-item-5">A Philosophy</a>
+              </div>
+            </div>
+            <div class="col-8 my-5">
+              <div data-bs-spy="scroll" data-bs-target="#simple-list-example" data-bs-offset="0" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                <h4 id="simple-list-item-1" class="brand">Symfony at a Glance</h4>
+                <p>A framework is not absolutely necessary: it is “just” one of the tools that is available to help you develop better and faster!</p>
+                   <p>Better, because a framework provides you with the certainty that you are developing an application that is in full compliance with the business rules, that is structured, and that is both maintainable and upgradable.</p> 
+                   <p>Faster, because it allows developers to save time by re-using generic modules in order to focus on other areas. Without, however, ever being tied to the framework itself.</p>
+                <h4 id="simple-list-item-2" class="brand">Investing in the task</h4>
+                <p>This is the basic principle of a framework: Not having to reinvent the wheel. And doing away with foreboding, low value added tasks (for example, the development of generic components) in order to fully focus on the business rules.</p>
+                <p>As an example, a framework will keep the developer from having to spend 2 or 3 days creating an authentication form (which is not a specific task). The time that is saved can be dedicated to more specific components as well as to 
+                    the corresponding unit tests; giving you solid, sustainable and high quality code.</p>
+                <h4 id="simple-list-item-3" class="brand">Upgradability and maintenance</h4>
+                <p>In the longer term, a framework ensures the longevity of your applications. If a development team works as they please, only that particular team will be able to maintain and upgrade the application with ease. The way that a publisher supports a proprietary solution.</p>
+                <p>On the other hand, the structure that a framework provides for the application makes it possible to avoid this pitfall altogether and it gives any developer - whether they participated in its development or not – the ability to easily “adopt” an application, to maintain it over time and to upgrade it both quickly and neatly, whenever necessary.</p>
+                <p>In this regard, a framework is not a black box! In the case of Symfony, it is still PHP... The applications that are developed are not limited to the Symfony universe, and they are natively interoperable with any other PHP library, for example.</p>
+                <h4 id="simple-list-item-4" class="brand">PHP framework</h4>
+                <p>In order to better understand what a framework is, let’s leave the world of computer science for a moment and imagine a mountaineering adventure. Developing an application is very similar to climbing a rock wall: you are at the bottom (you have an application to be created) and you need to reach the summit (and be pleased with the achievement of designing an application that works perfectly.)</p>
+                <p>If no one has ever climbed the wall in question, you will have to get by on your own: testing routes, occasionally backtracking so that you don’t get stuck in a corner, driving in pitons, etc. In contrast, if the wall has already been conquered, those who have gone before you will already have done this trial and error work, opening up possible paths (the frame) and installing the tools that will facilitate the climb (your work).</p>
+                <h4 id="simple-list-item-5" class="brand">A Philosophy</h4>
+                <p>What could be more useful than an application developed by users for their own needs? This is the story of the genesis of Symfony – born from the imagination of the web designers at SensioLabs, a web developer in its own right. Symfony was made available to everyone under an Open Source license. This benefits other developers, who also have the ability to improve it by adding their own modules. All this was done in an environment of Best Practices, standardization and interoperability of applications.</p>
+              </div>
+            </div>
+          </div>
+          
+      </div>
+
+    
+
+{% endblock %}
